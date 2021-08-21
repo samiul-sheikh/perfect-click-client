@@ -5,6 +5,7 @@ import Footer from './Component/Reuse/Footer/Footer';
 import Navbar from './Component/Reuse/Navbar/Navbar';
 import Checkout from './Component/Checkout/Checkout';
 import Dashboard from './Component/Dashboard/Dashboard/Dashboard';
+import AddServices from './Component/Dashboard/Dashboard/AddServices/AddServices';
 
 function App() {
     return (
@@ -15,10 +16,11 @@ function App() {
                     <Switch>
                         <Route exact path="/" component={Home} />
                         <Route path="/checkout" component={Checkout} />
-                        <Route exact path="/dashboard" component={Dashboard} />
+                        <Route path="/dashboard" component={Dashboard} />
+                        <Route path="/admin/addService" component={AddServices} />
                     </Switch>
                 </div>
-                <Footer />
+                {/* <Footer /> */}
             </Router>
         </>
     );
