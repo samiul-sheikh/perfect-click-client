@@ -11,7 +11,7 @@ const AddServices = () => {
     const onSubmit = data => {
 
         const serviceData = {
-            service: data.service,
+            name: data.name,
             description: data.description,
             price: data.price,
             imageURL: imageURL
@@ -53,8 +53,8 @@ const AddServices = () => {
                 <form onSubmit={handleSubmit(onSubmit)}>
                     <div className="form-group mb-3">
                         <label for="exampleInputService" class="form-label">Service Title</label>
-                        <input type="text" ref={register({ required: true })} name="service" placeholder="Enter Title" className="form-control" />
-                        {errors.service && <span className="text-danger">This field is required</span>}
+                        <input type="text" ref={register({ required: true })} name="name" placeholder="Enter Title" className="form-control" />
+                        {errors.name && <span className="text-danger">This field is required</span>}
                     </div>
                     <div className="form-group mb-3">
                         <label for="exampleInputService" class="form-label">Service Description</label>

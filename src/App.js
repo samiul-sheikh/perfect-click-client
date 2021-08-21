@@ -1,7 +1,6 @@
 import './App.css';
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Home from './Component/Homepage/Home/Home';
-import Footer from './Component/Reuse/Footer/Footer';
 import Navbar from './Component/Reuse/Navbar/Navbar';
 import Checkout from './Component/Checkout/Checkout';
 import Dashboard from './Component/Dashboard/Dashboard/Dashboard';
@@ -20,7 +19,6 @@ function App() {
                         <Route path="/admin/addService" component={AddServices} />
                     </Switch>
                 </div>
-                {/* <Footer /> */}
             </Router>
         </>
     );

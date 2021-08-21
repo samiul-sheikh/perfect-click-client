@@ -1,30 +1,17 @@
-import React from 'react';
-import img1 from '../../../images/img1.jpg';
-import img2 from '../../../images/img2.jpg';
-import img5 from '../../../images/img5.jpg';
-import img4 from '../../../images/img4.jpg';
+import React, { useEffect, useState } from 'react';
 import ServiceDetail from '../ServiceDetail/ServiceDetail';
 
-const serviceData = [
-    {
-        name: 'Portrait Photography',
-        image: img1
-    },
-    {
-        name: 'Bridal Photography',
-        image: img2
-    },
-    {
-        name: 'Indoor Photography',
-        image: img5
-    },
-    {
-        name: 'Outdoor Photography',
-        image: img4
-    }
-]
-
 const Services = () => {
+
+    const [services, setservices] = useState([]);
+
+    // display services from server
+    useEffect(() => {
+        fetch('http://localhost:5000/services')
+            .then(res => res.json())
+            .then(data => setservices(data))
+    }, [])
+
     return (
         <section className="container mt-5">
             <div className="text-center text-primary">
@@ -33,7 +20,7 @@ const Services = () => {
             </div>
             <div className="row mt-3">
                 {
-                    serviceData.map(service => <ServiceDetail service={service}></ServiceDetail>)
+                    services.map(service => <ServiceDetail service={service}></ServiceDetail>)
                 }
             </div>
         </section>
