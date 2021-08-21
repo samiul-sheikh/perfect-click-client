@@ -20,13 +20,19 @@ const Navbar = () => {
                             <NavLink exact to="/" activeClassName="active" className="nav-links" onClick={handleClick}>Home</NavLink>
                         </li>
                         <li className="nav-item">
-                            <NavLink exact to="/about" activeClassName="active" className="nav-links" onClick={handleClick}>About</NavLink>
+                            <NavLink exact to="/service" activeClassName="active" className="nav-links" onClick={handleClick}>Service</NavLink>
                         </li>
                         <li className="nav-item">
                             <NavLink exact to="/blog" activeClassName="active" className="nav-links" onClick={handleClick}>BLog</NavLink>
                         </li>
                         <li className="nav-item">
+                            <NavLink exact to="/dashboard" activeClassName="active" className="nav-links" onClick={handleClick}>Dashboard</NavLink>
+                        </li>
+                        <li className="nav-item">
                             <NavLink exact to="/contact" activeClassName="active" className="nav-links" onClick={handleClick}>Contact</NavLink>
+                        </li>
+                        <li className="nav-item">
+                            <NavLink exact to="/about" activeClassName="active" className="nav-links" onClick={handleClick}>About us</NavLink>
                         </li>
                     </ul>
                     <div className="nav-icon" onClick={handleClick}>

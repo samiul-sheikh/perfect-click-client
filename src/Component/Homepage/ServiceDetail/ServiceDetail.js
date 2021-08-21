@@ -8,8 +8,8 @@ const ServiceDetail = ({ service }) => {
                 <div class="card-body">
                     <h5 className="card-title">{service.name}</h5> <br />
                     <div className="d-flex justify-content-between">
-                        <button type="button" class="btn btn-primary">Details</button>
-                        <button type="button" class="btn btn-primary">Order</button>
+                        <button type="button" class="btn btn-primary">view more</button>
+                        <button type="button" class="btn btn-primary">buy now</button>
                     </div>
                 </div>
             </div>
