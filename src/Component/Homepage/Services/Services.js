@@ -3,13 +3,13 @@ import ServiceDetail from '../ServiceDetail/ServiceDetail';
 
 const Services = () => {
 
-    const [services, setservices] = useState([]);
+    const [services, setServices] = useState([]);
 
     // display services from server
     useEffect(() => {
         fetch('http://localhost:5000/services')
             .then(res => res.json())
-            .then(data => setservices(data))
+            .then(data => setServices(data))
     }, [])
 
     return (
