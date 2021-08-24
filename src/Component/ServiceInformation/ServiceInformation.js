@@ -12,7 +12,7 @@ const ServiceInformation = () => {
         fetch('http://localhost:5000/service/' + id)
             .then(res => res.json())
             .then(data => setServiceInfo(data))
-            // console.log(serviceInfo);
+            console.log(serviceInfo);
     }, [id])
 
     return (
