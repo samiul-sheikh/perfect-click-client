@@ -19,7 +19,7 @@ const ServiceDetail = ({ service }) => {
                     <h5 className="card-title">{service.name}</h5> <br />
                     <div className="d-flex justify-content-between">
                         <button onClick={() => handleService(service._id)} type="button" className="btn btn-primary">View More</button>
-                        <button type="button" class="btn btn-primary">Buy Now</button>
+                        <button type="button" className="btn btn-primary">Buy Now</button>
                     </div>
                 </div>
             </div>
