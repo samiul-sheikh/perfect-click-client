@@ -1,9 +1,8 @@
 import React from 'react';
-import { useHistory, useParams } from 'react-router-dom';
+import { useHistory } from 'react-router-dom';
 
 const ServiceDetail = ({ service }) => {
 
-    const { id } = useParams();
     const history = useHistory();
 
     const handleService = id => {

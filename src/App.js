@@ -6,6 +6,7 @@ import ServiceInformation from './Component/ServiceInformation/ServiceInformatio
 import Checkout from './Component/Checkout/Checkout';
 import Dashboard from './Component/Dashboard/Dashboard/Dashboard';
 import AddServices from './Component/Dashboard/Dashboard/AddServices/AddServices';
+import Login from './Component/Login/Login/Login';
 
 function App() {
     return (
@@ -15,6 +16,7 @@ function App() {
                 <div className="pages">
                     <Switch>
                         <Route exact path="/" component={Home} />
+                        <Route exact path="/login" component={Login} />
                         <Route path="/service/:id" component={ServiceInformation} />
                         <Route path="/checkout" component={Checkout} />
                         <Route path="/dashboard" component={Dashboard} />
