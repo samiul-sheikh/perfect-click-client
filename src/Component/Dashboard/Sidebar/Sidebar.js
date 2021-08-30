@@ -14,7 +14,7 @@ const Sidebar = () => {
                     </Link>
                 </li>
                 <li>
-                    <Link to="/admin/order" className="text-white text-decoration-none">
+                    <Link to="/admin/orders" className="text-white text-decoration-none">
                         <FontAwesomeIcon icon={faCalendar} /> <span>Order List</span>
                     </Link>
                 </li>

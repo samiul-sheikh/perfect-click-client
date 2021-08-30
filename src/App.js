@@ -7,6 +7,7 @@ import CheckOut from './Component/CheckOut/CheckOut';
 import Dashboard from './Component/Dashboard/Dashboard/Dashboard';
 import AddServices from './Component/Dashboard/Dashboard/AddServices/AddServices';
 import Login from './Component/Login/Login/Login';
+import Orders from './Component/Orders/Orders';
 
 function App() {
     return (
@@ -21,6 +22,7 @@ function App() {
                         <Route path="/checkout/:id" component={CheckOut} />
                         <Route path="/dashboard" component={Dashboard} />
                         <Route path="/admin/addService" component={AddServices} />
+                        <Route path="/admin/orders" component={Orders} />
                     </Switch>
                 </div>
             </Router>
