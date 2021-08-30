@@ -14,6 +14,20 @@ const CheckOut = () => {
             .then(data => setCheckoutService(data))
     }, [id]);
 
+    // store checkOut service information in server
+    const handleOrder = () => {
+        const newOrder = { ...checkoutService }
+        fetch('http://localhost:5000/addOrder', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(newOrder)
+        })
+            .then(res => res.json())
+            .then(data => {
+                console.log(data)
+            })
+    }
+
 
     return (
 
@@ -22,7 +36,7 @@ const CheckOut = () => {
             <img src={checkoutService.imageURL} alt="" />
             <p>{checkoutService.name}</p>
             <p>{checkoutService.price}</p>
-            <button type="button" class="btn btn-success">Place Order</button>
+            <button onClick={handleOrder} type="button" className="btn btn-success">Place Order</button>
         </div>
     );
 };
