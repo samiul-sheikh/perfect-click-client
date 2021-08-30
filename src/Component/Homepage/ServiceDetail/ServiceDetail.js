@@ -5,8 +5,13 @@ const ServiceDetail = ({ service }) => {
 
     const history = useHistory();
 
-    const handleService = id => {
+    const serviceInfo = id => {
         const url = `/service/${id}`;
+        history.push(url);
+    }
+
+    const handleService = id => {
+        const url = `/checkout/${id}`;
         history.push(url);
     }
 
@@ -17,8 +22,8 @@ const ServiceDetail = ({ service }) => {
                 <div className="card-body">
                     <h5 className="card-title">{service.name}</h5> <br />
                     <div className="d-flex justify-content-between">
-                        <button onClick={() => handleService(service._id)} type="button" className="btn btn-primary">View More</button>
-                        <button type="button" className="btn btn-primary">Buy Now</button>
+                        <button onClick={() => serviceInfo(service._id)} type="button" className="btn btn-primary">View More</button>
+                        <button onClick={() => handleService(service._id)} type="button" className="btn btn-primary">Buy Now</button>
                     </div>
                 </div>
             </div>

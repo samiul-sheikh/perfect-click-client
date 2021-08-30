@@ -5,7 +5,7 @@ const Services = () => {
 
     const [services, setServices] = useState([]);
 
-    // display services from server
+    // display all services from server
     useEffect(() => {
         fetch('http://localhost:5000/services')
             .then(res => res.json())
