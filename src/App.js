@@ -5,9 +5,10 @@ import Navbar from './Component/Reuse/Navbar/Navbar';
 import ServiceInformation from './Component/ServiceInformation/ServiceInformation';
 import CheckOut from './Component/CheckOut/CheckOut';
 import Dashboard from './Component/Dashboard/Dashboard/Dashboard';
-import AddServices from './Component/Dashboard/Dashboard/AddServices/AddServices';
+import AddServices from './Component/Dashboard//AddServices/AddServices';
 import Login from './Component/Login/Login/Login';
-import Orders from './Component/Orders/Orders';
+import Orders from './Component/Dashboard/Orders/Orders';
+import NoMatch from './Component/NoMatch/NoMatch';
 
 function App() {
     return (
@@ -23,6 +24,7 @@ function App() {
                         <Route path="/dashboard" component={Dashboard} />
                         <Route path="/admin/addService" component={AddServices} />
                         <Route path="/admin/orders" component={Orders} />
+                        <Route path="/*" component={NoMatch} />
                     </Switch>
                 </div>
             </Router>
