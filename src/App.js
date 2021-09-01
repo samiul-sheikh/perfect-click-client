@@ -1,3 +1,4 @@
+import { createContext, useState } from 'react';
 import './App.css';
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Home from './Component/Homepage/Home/Home';
@@ -10,24 +11,31 @@ import Login from './Component/Login/Login/Login';
 import Orders from './Component/Dashboard/Orders/Orders';
 import NoMatch from './Component/NoMatch/NoMatch';
 
+export const UserContext = createContext();
+
 function App() {
+
+    const [loggedInUser, setLoggedInUser] = useState({ });
+
     return (
         <>
-            <Router>
-                <Navbar></Navbar>
-                <div className="pages">
-                    <Switch>
-                        <Route exact path="/" component={Home} />
-                        <Route path="/login" component={Login} />
-                        <Route path="/service/:id" component={ServiceInformation} />
-                        <Route path="/checkout/:id" component={CheckOut} />
-                        <Route path="/dashboard" component={Dashboard} />
-                        <Route path="/admin/addService" component={AddServices} />
-                        <Route path="/admin/orders" component={Orders} />
-                        <Route path="/*" component={NoMatch} />
-                    </Switch>
-                </div>
-            </Router>
+            <UserContext.Provider value={[loggedInUser, setLoggedInUser]}>
+                <Router>
+                    <Navbar></Navbar>
+                    <div className="pages">
+                        <Switch>
+                            <Route exact path="/" component={Home} />
+                            <Route path="/login" component={Login} />
+                            <Route path="/service/:id" component={ServiceInformation} />
+                            <Route path="/checkout/:id" component={CheckOut} />
+                            <Route path="/dashboard" component={Dashboard} />
+                            <Route path="/admin/addService" component={AddServices} />
+                            <Route path="/admin/orders" component={Orders} />
+                            <Route path="/*" component={NoMatch} />
+                        </Switch>
+                    </div>
+                </Router>
+            </UserContext.Provider>
         </>
     );
 }

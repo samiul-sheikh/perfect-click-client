@@ -8,7 +8,7 @@ import { useHistory, useLocation } from 'react-router-dom';
 
 const Login = () => {
 
-    // const [loggedInUser, setLoggedInUser] = useContext(UserContext);
+    const [loggedInUser, setLoggedInUser] = useContext(UserContext);
 
     const history = useHistory();
     const location = useLocation();
@@ -25,12 +25,12 @@ const Login = () => {
         firebase.auth()
             .signInWithPopup(googleProvider)
             .then((result) => {
-                const { displayName, email } = result.user;
-                const signedInUser = { name: displayName, email }
+                const { photoURL, displayName, email } = result.user;
+                const signedInUser = { image: photoURL, name: displayName, email }
                 console.log(signedInUser);
-                // setLoggedInUser(signedInUser);
+                setLoggedInUser(signedInUser);
                 storeAuthToken();
-                // history.replace(from);
+                history.replace(from);
             })
             .catch((error) => {
                 const errorMessage = error.message;

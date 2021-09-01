@@ -1,9 +1,12 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { useState } from 'react';
 import { NavLink } from 'react-router-dom';
+import { UserContext } from '../../../App';
 import './Navbar.css';
 
 const Navbar = () => {
+
+    const [loggedInUser, setLoggedInUser] = useContext(UserContext);
 
     const [click, setClick] = useState(false);
 
@@ -34,9 +37,14 @@ const Navbar = () => {
                         <li className="nav-item">
                             <NavLink exact to="/about" activeClassName="active" className="nav-links" onClick={handleClick}>About us</NavLink>
                         </li>
-                        <li className="nav-item">
-                            <NavLink exact to="/login" activeClassName="active" className="nav-links" onClick={handleClick}>Login</NavLink>
-                        </li>
+                        {loggedInUser.name ?
+                            <li className="nav-item">
+                                <NavLink exact to="/login" activeClassName="active" className="nav-links" onClick={handleClick}>{loggedInUser.name}</NavLink>
+                            </li> :
+                            <li className="nav-item">
+                                <NavLink exact to="/login" activeClassName="active" className="nav-links" onClick={handleClick}>Login</NavLink>
+                            </li>
+                        }
                     </ul>
                     <div className="nav-icon" onClick={handleClick}>
                         <i className={click ? "fas fa-times" : "fas fa-bars"} />
