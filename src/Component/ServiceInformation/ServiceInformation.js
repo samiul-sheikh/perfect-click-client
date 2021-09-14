@@ -5,7 +5,7 @@ const ServiceInformation = () => {
 
     const { id } = useParams();
 
-    const [serviceInfo, setServiceInfo] = useState({ });
+    const [serviceInfo, setServiceInfo] = useState({});
 
     useEffect(() => {
         fetch('http://localhost:5000/service/' + id)
@@ -14,12 +14,17 @@ const ServiceInformation = () => {
     }, [id])
 
     return (
-        <div className="text-center">
-            <h2>Service Information</h2>
-            <img src={serviceInfo.imageURL} alt="" />
-            <h5>{serviceInfo.name}</h5>
-            <p>{serviceInfo.price}</p>
-            <p>{serviceInfo.description}</p>
+        <div className="container">
+            <div className="row">
+                <div className="col-sm-12 col-md-6">
+                    <img src={serviceInfo.imageURL} className="img-fluid" alt="" />
+                </div>
+                <div className="col-sm-12 col-md-6">
+                    <h1>Name: {serviceInfo.name}</h1>
+                    <h3>Price: {serviceInfo.price}</h3>
+                    <h5>Details: {serviceInfo.description}</h5>
+                </div>
+            </div>
         </div>
     );
 };

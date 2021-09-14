@@ -10,12 +10,13 @@ import AddServices from './Component/Dashboard//AddServices/AddServices';
 import Login from './Component/Login/Login/Login';
 import Orders from './Component/Dashboard/Orders/Orders';
 import NoMatch from './Component/NoMatch/NoMatch';
+import PrivateRoute from './Component/Login/PrivateRoute/PrivateRoute';
 
 export const UserContext = createContext();
 
 function App() {
 
-    const [loggedInUser, setLoggedInUser] = useState({ });
+    const [loggedInUser, setLoggedInUser] = useState({});
 
     return (
         <>
@@ -28,7 +29,9 @@ function App() {
                             <Route path="/login" component={Login} />
                             <Route path="/service/:id" component={ServiceInformation} />
                             <Route path="/checkout/:id" component={CheckOut} />
-                            <Route path="/dashboard" component={Dashboard} />
+                            <PrivateRoute path="/dashboard">
+                                <Dashboard />
+                            </PrivateRoute>
                             <Route path="/admin/addService" component={AddServices} />
                             <Route path="/admin/orders" component={Orders} />
                             <Route path="/*" component={NoMatch} />
