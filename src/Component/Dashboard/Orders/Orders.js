@@ -12,17 +12,44 @@ const Orders = () => {
             .then(data => setOrders(data));
     }, [])
 
+    const orderList = () => {
+        return (
+            orders.map(order => {
+                return (
+                    <React.Fragment>
+                        <tbody>
+                            <td>{order.name} </td>
+                            <td>{order.email}</td>
+                            <td>{order.service}</td>
+                            <td>{order.price}</td>
+                            <td className="text-danger">{order.status}</td>
+                        </tbody>
+                    </React.Fragment>
+                )
+            })
+        )
+    }
+
     return (
         <section className="container-fluid row">
             <Sidebar></Sidebar>
             <div className="col-md-10 p-4 pr-5" style={{ position: 'absolute', right: 0, backgroundColor: '#F4FDFB' }}>
-                <h5 className="text-center">Total Order place: {orders.length} package</h5>
-                {
-                    orders.map(order => <li> service : {order.name} price: {order.price} </li>)
-                }
+                <h3>Order List</h3>
+                <p className="text-center">Total order placed: {orders.length} package</p>
+                <table className="table w-100">
+                    <thead>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Service</th>
+                        <th>Price</th>
+                        <th>Status</th>
+                    </thead>
+                    {
+                        orderList()
+                    }
+                </table>
             </div>
         </section>
-
     );
 };
 

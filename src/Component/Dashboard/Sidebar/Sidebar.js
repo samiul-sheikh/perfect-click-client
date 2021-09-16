@@ -9,7 +9,7 @@ const Sidebar = () => {
         <div className="sidebar d-flex flex-column justify-content-between col-md-2 py-5 px-4" style={{ height: "100vh", left: "0" }}>
             <ul className="list-unstyled">
                 <li>
-                    <Link to="/admin/dashboard" className="text-white text-decoration-none">
+                    <Link to="/dashboard" className="text-white text-decoration-none">
                         <FontAwesomeIcon icon={faGripHorizontal} /> <span>Dashboard</span>
                     </Link>
                 </li>

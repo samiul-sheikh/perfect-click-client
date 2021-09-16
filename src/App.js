@@ -29,7 +29,9 @@ function App() {
                             <Route exact path="/" component={Home} />
                             <Route path="/login" component={Login} />
                             <Route path="/service/:id" component={ServiceInformation} />
-                            <Route path="/checkout/:id" component={CheckOut} />
+                            <PrivateRoute path="/checkout/:id">
+                                <CheckOut />
+                            </PrivateRoute>
                             <PrivateRoute path="/dashboard">
                                 <Dashboard />
                             </PrivateRoute>

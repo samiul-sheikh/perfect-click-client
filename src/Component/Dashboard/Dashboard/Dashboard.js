@@ -14,11 +14,10 @@ const Dashboard = () => {
                 <div className="col-md-2">
                     <Sidebar></Sidebar>
                 </div>
-                <div className="col-md-5 d-flex justify-content-center">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto, ab?</p>
+                <div className="col-md-10">
+                    <h3>Dashboard</h3>
+                    <p className="text-center">Admin/User Dashboard</p>
                 </div>
-                <div className="col-md-5">
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deserunt, exercitationem?</p>                </div>
             </div>
         </section>
     );

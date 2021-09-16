@@ -48,7 +48,8 @@ const AddTestimonial = () => {
         <section className="container-fluid row">
             <Sidebar></Sidebar>
             <div className="col-md-10 p-4 pr-5" style={{ position: 'absolute', right: 0, backgroundColor: '#F4FDFB' }}>
-                <h5 className="text-center">Add Your testimonial Here</h5>
+                <h3>Testimonial</h3>
+                <p className="text-center">Tell something about us...</p>
                 <form onSubmit={handleSubmit(onSubmit)}>
                     <div className="form-group mb-3">
                         <label for="exampleInputTestimonial" className="form-label">Your Name</label>

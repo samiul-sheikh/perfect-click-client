@@ -33,7 +33,7 @@ const Blogs = () => {
             </div>
             <div className="row mt-3">
                 {
-                    blogData.map(blog => <BlogDetail blog={blog}></BlogDetail>)
+                    blogData.map(blog => <BlogDetail blog={blog} key={blog.name}></BlogDetail>)
                 }
             </div>
         </section>

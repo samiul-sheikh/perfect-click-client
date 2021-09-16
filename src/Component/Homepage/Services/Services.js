@@ -20,7 +20,7 @@ const Services = () => {
             </div>
             <div className="row mt-3">
                 {
-                    services.map(service => <ServiceDetail service={service}></ServiceDetail>)
+                    services.map(service => <ServiceDetail service={service} key={service.name}></ServiceDetail>)
                 }
             </div>
         </section>

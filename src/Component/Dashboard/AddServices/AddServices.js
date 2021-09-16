@@ -49,25 +49,26 @@ const AddServices = () => {
         <section className="container-fluid row">
             <Sidebar></Sidebar>
             <div className="col-md-10 p-4 pr-5" style={{ position: 'absolute', right: 0, backgroundColor: '#F4FDFB' }}>
-                <h5 className="text-center">Add your service here</h5>
+                <h3>Add Service</h3>
+                <p className="text-center">Add new service here</p>
                 <form onSubmit={handleSubmit(onSubmit)}>
                     <div className="form-group mb-3">
-                        <label for="exampleInputService" class="form-label">Service Title</label>
-                        <input type="text" ref={register({ required: true })} name="name" placeholder="Enter Title" className="form-control" />
+                        <label for="exampleInputService" className="form-label">Service Title</label>
+                        <input type="text" ref={register({ required: true })} name="name" placeholder="enter title" className="form-control" />
                         {errors.name && <span className="text-danger">This field is required</span>}
                     </div>
                     <div className="form-group mb-3">
-                        <label for="exampleInputService" class="form-label">Service Description</label>
-                        <input type="text" ref={register({ required: true })} name="description" placeholder="Enter Description" className="form-control" />
+                        <label for="exampleInputService" className="form-label">Service Description</label>
+                        <input type="text" ref={register({ required: true })} name="description" placeholder="enter description" className="form-control" />
                         {errors.description && <span className="text-danger">This field is required</span>}
                     </div>
                     <div className="form-group mb-3">
-                        <label for="exampleInputPrice" class="form-label">Service Price</label>
-                        <input type="text" ref={register({ required: true })} name="price" placeholder="Enter Price" className="form-control" />
+                        <label for="exampleInputPrice" className="form-label">Service Price</label>
+                        <input type="text" ref={register({ required: true })} name="price" placeholder="enter price" className="form-control" />
                         {errors.price && <span className="text-danger">This field is required</span>}
                     </div>
                     <div className="form-group mb-3">
-                        <label for="exampleInputImage" class="form-label">Service Image</label>
+                        <label for="exampleInputImage" className="form-label">Service Image</label>
                         <input onChange={handleImageUpload} type="file" ref={register({ required: true })} name="image" placeholder="Upload an Image" className="form-control" />
                         {errors.image && <span className="text-danger">This field is required</span>}
                     </div>

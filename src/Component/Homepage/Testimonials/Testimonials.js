@@ -17,7 +17,7 @@ const Testimonials = () => {
             <div className="container">
                 <div className="section-header text-center text-primary">
                     <h2>Testimonials</h2>
-                    <h5>client says about us</h5>
+                    <h5>Client says about us</h5>
                 </div>
                 <div className="row mt-5">
                     {
