@@ -2,38 +2,16 @@ import axios from 'axios';
 import React, { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import Sidebar from '../Sidebar/Sidebar';
+import swal from "sweetalert";
 
 const AddServices = () => {
 
-    const { register, handleSubmit, errors } = useForm();
-    const [imageURL, setImageURL] = useState(null)
-
-    const onSubmit = data => {
-
-        const serviceData = {
-            name: data.name,
-            description: data.description,
-            price: data.price,
-            imageURL: imageURL
-        };
-
-        const url = `http://localhost:5000/addService`;
-        // console.log(serviceData)
-
-        fetch(url, {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify(serviceData)
-        })
-            .then(res => console.log('server side res ', res))
-    };
+    const [imageURL, setImageURL] = useState(null);
 
     const handleImageUpload = service => {
         console.log(service.target.files[0]);
         const imageData = new FormData();
-        imageData.set('key', 'b8a0776f79e4a37c3c341318f0f61e22')
+        imageData.set('key', 'b8a0776f79e4a37c3c341318f0f61e22');
         imageData.append('image', service.target.files[0]);
 
         axios.post('https://api.imgbb.com/1/upload', imageData)
@@ -43,7 +21,34 @@ const AddServices = () => {
             .catch(function (error) {
                 console.log(error);
             });
-    }
+    };
+
+    const { register, handleSubmit, errors } = useForm();
+
+    const onSubmit = (data) => {
+        const {name, description, price} = data;
+
+        const serviceData = {
+            name: name,
+            description: description,
+            price: price,
+            imageURL: imageURL
+        };
+
+        console.log(serviceData)
+
+        fetch('http://localhost:5000/addService', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(serviceData)
+        })
+            .then((res) => res.json())
+            .then((result) => {
+                if (result && imageURL) {
+                    swal("Congratulations!", "Service added successfully!", "success");
+                }
+            });
+    };
 
     return (
         <section className="container-fluid row">

@@ -29,7 +29,7 @@ const Sidebar = () => {
                     </Link>
                 </li>
                 <li>
-                    <Link to="/admin/setting" className="text-white text-decoration-none">
+                    <Link to="/admin/manageServices" className="text-white text-decoration-none">
                         <FontAwesomeIcon icon={faCog} /> <span>Manage Service</span>
                     </Link>
                 </li>

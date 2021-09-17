@@ -12,6 +12,7 @@ import Orders from './Component/Dashboard/Orders/Orders';
 import NoMatch from './Component/NoMatch/NoMatch';
 import PrivateRoute from './Component/Login/PrivateRoute/PrivateRoute';
 import AddTestimonial from './Component/Dashboard/AddTestimonial/AddTestimonial';
+import ManageServices from './Component/Dashboard/ManageServices/ManageServices';
 
 export const UserContext = createContext();
 
@@ -35,6 +36,9 @@ function App() {
                             <PrivateRoute path="/dashboard">
                                 <Dashboard />
                             </PrivateRoute>
+                            <Route path="/admin/manageServices">
+                                <ManageServices />
+                            </Route>
                             <Route path="/admin/addService" component={AddServices} />
                             <Route path="/addReview" component={AddTestimonial} />
                             <Route path="/admin/orders" component={Orders} />
