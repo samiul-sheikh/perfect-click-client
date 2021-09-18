@@ -38,6 +38,11 @@ const Sidebar = () => {
                         <FontAwesomeIcon icon={faCog} /> <span>Manage Service</span>
                     </Link>
                 </li>
+                <li>
+                    <Link to="/admin/makeAdmin" className="text-white text-decoration-none">
+                        <FontAwesomeIcon icon={faUserPlus} /> <span>Make Admin</span>
+                    </Link>
+                </li>
             </ul>
             <div>
                 <Link to="/" className="text-white text-decoration-none"><FontAwesomeIcon icon={faSignOutAlt} /> <span>Logout</span></Link>

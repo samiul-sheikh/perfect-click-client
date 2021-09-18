@@ -5,6 +5,7 @@ import Sidebar from "../Sidebar/Sidebar";
 const AllOrders = () => {
     const [orders, setOrders] = useState([]);
 
+    // display all ordered services for admin
     useEffect(() => {
         fetch("http://localhost:5000/allOrders")
             .then((res) => res.json())

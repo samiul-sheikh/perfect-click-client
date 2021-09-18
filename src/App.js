@@ -14,6 +14,7 @@ import AddTestimonial from './Component/Dashboard/AddTestimonial/AddTestimonial'
 import ManageServices from './Component/Dashboard/ManageServices/ManageServices';
 import AllOrders from './Component/Dashboard/AllOrders/AllOrders';
 import OrderList from './Component/Dashboard/OrderList/OrderList';
+import MakeAdmin from './Component/Dashboard/MakeAdmin/MakeAdmin';
 
 export const UserContext = createContext();
 
@@ -42,6 +43,7 @@ function App() {
                             </Route>
                             <Route path="/admin/addService" component={AddServices} />
                             <Route path="/addReview" component={AddTestimonial} />
+                            <Route path="/admin/makeAdmin" component={MakeAdmin} />
                             <Route path="/orders" component={OrderList} />
                             <Route path="/admin/orders" component={AllOrders} />
                             <Route path="/*" component={NoMatch} />

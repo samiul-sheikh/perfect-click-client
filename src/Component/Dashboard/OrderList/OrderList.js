@@ -8,7 +8,7 @@ const OrderList = () => {
     const [loggedInUser, setLoggedInUser] = useContext(UserContext);
     const [orders, setOrders] = useState([]);
 
-    // display all ordered services for admin
+    // display all ordered services for specific user
     useEffect(() => {
         fetch('http://localhost:5000/orders?email=' + loggedInUser.email)
             .then(res => res.json())
