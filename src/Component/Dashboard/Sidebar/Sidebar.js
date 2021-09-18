@@ -14,6 +14,11 @@ const Sidebar = () => {
                     </Link>
                 </li>
                 <li>
+                    <Link to="/addReview" className="text-white text-decoration-none">
+                        <FontAwesomeIcon icon={faCalendar} /> <span>Add Review</span>
+                    </Link>
+                </li>
+                <li>
                     <Link to="/orders" className="text-white text-decoration-none">
                         <FontAwesomeIcon icon={faCalendar} /> <span>Order List</span>
                     </Link>
@@ -21,11 +26,6 @@ const Sidebar = () => {
                 <li>
                     <Link to="/admin/orders" className="text-white text-decoration-none">
                         <FontAwesomeIcon icon={faCalendar} /> <span> All Order List</span>
-                    </Link>
-                </li>
-                <li>
-                    <Link to="/addReview" className="text-white text-decoration-none">
-                        <FontAwesomeIcon icon={faCalendar} /> <span>Add Review</span>
                     </Link>
                 </li>
                 <li>
@@ -41,6 +41,11 @@ const Sidebar = () => {
                 <li>
                     <Link to="/admin/makeAdmin" className="text-white text-decoration-none">
                         <FontAwesomeIcon icon={faUserPlus} /> <span>Make Admin</span>
+                    </Link>
+                </li>
+                <li>
+                    <Link to="/admin/admins" className="text-white text-decoration-none">
+                        <FontAwesomeIcon icon={faCog} /> <span>Admin List</span>
                     </Link>
                 </li>
             </ul>

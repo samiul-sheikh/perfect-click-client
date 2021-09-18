@@ -15,6 +15,7 @@ import ManageServices from './Component/Dashboard/ManageServices/ManageServices'
 import AllOrders from './Component/Dashboard/AllOrders/AllOrders';
 import OrderList from './Component/Dashboard/OrderList/OrderList';
 import MakeAdmin from './Component/Dashboard/MakeAdmin/MakeAdmin';
+import AdminList from './Component/Dashboard/AdminList/AdminList';
 
 export const UserContext = createContext();
 
@@ -40,6 +41,9 @@ function App() {
                             </PrivateRoute>
                             <Route path="/admin/manageServices">
                                 <ManageServices />
+                            </Route>
+                            <Route path="/admin/admins">
+                                <AdminList />
                             </Route>
                             <Route path="/admin/addService" component={AddServices} />
                             <Route path="/addReview" component={AddTestimonial} />

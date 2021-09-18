@@ -12,7 +12,6 @@ const AllOrders = () => {
             .then((data) => setOrders(data))
     }, []);
 
-
     return (
         <section className="container-fluid row">
             <Sidebar />
