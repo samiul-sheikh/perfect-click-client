@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import Sidebar from '../../Dashboard/Sidebar/Sidebar';
 import swal from "sweetalert";
+// import Swal from 'sweetalert2'
 
 const AddServices = () => {
 
@@ -35,11 +36,11 @@ const AddServices = () => {
             imageURL: imageURL
         };
 
-        console.log(serviceData)
+        // console.log(serviceData)
 
         fetch('http://localhost:5000/addService', {
             method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
+            headers: { 'Content-Type': 'application/json', "Access-Control-Allow-Origin": "*", },
             body: JSON.stringify(serviceData)
         })
             .then((res) => res.json())

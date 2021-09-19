@@ -2,7 +2,7 @@ import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import './Sidebar.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCog, faSignOutAlt, faCalendar, faGripHorizontal, faUserPlus } from '@fortawesome/free-solid-svg-icons';
+import { faCog, faSignOutAlt, faGripHorizontal, faUserPlus, faCartArrowDown, faUsers, faCommentMedical, faShoppingCart } from '@fortawesome/free-solid-svg-icons';
 import { UserContext } from '../../../App';
 
 const Sidebar = () => {
@@ -20,19 +20,19 @@ const Sidebar = () => {
                     </li>
                     <li>
                         <Link to="/addReview" className="text-white text-decoration-none">
-                            <FontAwesomeIcon icon={faCalendar} /> <span>Add Review</span>
+                            <FontAwesomeIcon icon={faCommentMedical} /> <span>Add Review</span>
                         </Link>
                     </li>
                     <li>
                         <Link to="/orders" className="text-white text-decoration-none">
-                            <FontAwesomeIcon icon={faCalendar} /> <span>Order List</span>
+                            <FontAwesomeIcon icon={faShoppingCart} /> <span>Order List</span>
                         </Link>
                     </li>
                 </>)}
                 {loggedInUser.isAdmin && (<>
                     <li>
                         <Link to="/admin/orders" className="text-white text-decoration-none">
-                            <FontAwesomeIcon icon={faCalendar} /> <span> All Order List</span>
+                            <FontAwesomeIcon icon={faCartArrowDown} /> <span> All Order List</span>
                         </Link>
                     </li>
                     <li>
@@ -52,7 +52,7 @@ const Sidebar = () => {
                     </li>
                     <li>
                         <Link to="/admin/admins" className="text-white text-decoration-none">
-                            <FontAwesomeIcon icon={faCog} /> <span>Admin List</span>
+                            <FontAwesomeIcon icon={faUsers} /> <span>Admin List</span>
                         </Link>
                     </li>
                 </>)}

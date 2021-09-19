@@ -21,7 +21,12 @@ const Testimonials = () => {
                 </div>
                 <div className="row mt-5">
                     {
-                        testimonials.map(testimonial => <Testimonial testimonial={testimonial} key={testimonial.name} />)
+                        testimonials.length === 0 && <div class="spinner-border text-info mx-auto my-auto" role="status">
+                            <span className="visually-hidden">Loading...</span>
+                        </div>
+                    }
+                    {
+                        testimonials.map(testimonial => <Testimonial testimonial={testimonial} key={testimonial.email} />)
                     }
                 </div>
             </div>
