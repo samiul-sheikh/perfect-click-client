@@ -1,7 +1,7 @@
 import axios from 'axios';
 import React, { useState } from 'react';
 import { useForm } from 'react-hook-form';
-import Sidebar from '../Sidebar/Sidebar';
+import Sidebar from '../../Dashboard/Sidebar/Sidebar';
 import swal from "sweetalert";
 
 const AddServices = () => {

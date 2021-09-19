@@ -1,9 +1,8 @@
+import { useEffect, useState } from "react";
+import Sidebar from "../../Dashboard/Sidebar/Sidebar";
 import { faTrashAlt } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { useEffect, useState } from "react";
-import Sidebar from "../Sidebar/Sidebar";
 import swal from "sweetalert";
-
 
 const AdminList = () => {
     const [admins, setAdmins] = useState([]);

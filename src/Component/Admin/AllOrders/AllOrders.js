@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
-import Sidebar from "../Sidebar/Sidebar";
-
+import Sidebar from "../../Dashboard/Sidebar/Sidebar";
 
 const AllOrders = () => {
     const [orders, setOrders] = useState([]);

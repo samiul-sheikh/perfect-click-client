@@ -2,9 +2,9 @@ import React, { useContext, useState } from 'react';
 import { useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import { useForm } from 'react-hook-form';
-import { UserContext } from '../../../App';
+import { UserContext } from '../../App';
 import swal from "sweetalert";
-import Sidebar from '../Sidebar/Sidebar';
+import Sidebar from '../Dashboard/Sidebar/Sidebar';
 
 const CheckOut = () => {
 

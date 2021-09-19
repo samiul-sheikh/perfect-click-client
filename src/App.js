@@ -1,23 +1,23 @@
 import { createContext, useState } from 'react';
 import './App.css';
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Home from './Component/Homepage/Home/Home';
 import Navbar from './Component/Reuse/Navbar/Navbar';
-import ServiceInformation from './Component/ServiceInformation/ServiceInformation';
-import CheckOut from './Component/Dashboard/CheckOut/CheckOut';
-import Dashboard from './Component/Dashboard/Dashboard/Dashboard';
-import AddServices from './Component/Dashboard//AddServices/AddServices';
-import Login from './Component/Login/Login/Login';
-import NoMatch from './Component/NoMatch/NoMatch';
-import PrivateRoute from './Component/Login/PrivateRoute/PrivateRoute';
-import AddTestimonial from './Component/Dashboard/AddTestimonial/AddTestimonial';
-import ManageServices from './Component/Dashboard/ManageServices/ManageServices';
-import AllOrders from './Component/Dashboard/AllOrders/AllOrders';
-import OrderList from './Component/Dashboard/OrderList/OrderList';
-import MakeAdmin from './Component/Dashboard/MakeAdmin/MakeAdmin';
-import AdminList from './Component/Dashboard/AdminList/AdminList';
 import ImageGallery from './Component/ImageGallery/ImageGallery';
+import ServiceInformation from './Component/ServiceInformation/ServiceInformation';
+import CheckOut from './Component/CheckOut/CheckOut';
+import Dashboard from './Component/Dashboard/Dashboard/Dashboard';
+import Login from './Component/Login/Login/Login';
+import PrivateRoute from './Component/Login/PrivateRoute/PrivateRoute';
 import AdminRoute from './Component/Admin/AdminRoute/AdminRoute';
+import AddTestimonial from './Component/Dashboard/AddTestimonial/AddTestimonial';
+import OrderList from './Component/Dashboard/OrderList/OrderList';
+import AllOrders from './Component/Admin/AllOrders/AllOrders';
+import AddServices from './Component/Admin/AddServices/AddServices';
+import ManageServices from './Component/Admin/ManageServices/ManageServices';
+import MakeAdmin from './Component/Admin/MakeAdmin/MakeAdmin';
+import AdminList from './Component/Admin/AdminList/AdminList';
+import NoMatch from './Component/NoMatch/NoMatch';
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 export const UserContext = createContext();
 
@@ -35,7 +35,9 @@ function App() {
                             <Route exact path="/" component={Home} />
                             <Route path="/imageGallery" component={ImageGallery} />
                             <Route path="/login" component={Login} />
-                            <Route path="/service/:id" component={ServiceInformation} />
+                            <PrivateRoute path="/service/:id">
+                                <ServiceInformation />
+                            </PrivateRoute>
                             <PrivateRoute path="/checkout/:id">
                                 <CheckOut />
                             </PrivateRoute>
