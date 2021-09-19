@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import firebase from "firebase/app";
 import "firebase/auth";
 import firebaseConfig from '../../../config/firebase.config';
@@ -18,6 +18,26 @@ const Login = () => {
         firebase.initializeApp(firebaseConfig);
     }
 
+    const [admins, setAdmins] = useState([]);
+
+    useEffect(() => {
+        fetch("http://localhost:5000/admins")
+            .then((res) => res.json())
+            .then((admin) => setAdmins(admin));
+    }, []);
+
+    const [error, setError] = useState("");
+    const [user, setUser] = useState({
+        name: "",
+        email: "",
+    });
+    const [newUser, setNewUser] = useState(false);
+    const [signedInUser, setSignedInUser] = useState({
+        name: "",
+        email: "",
+        isAdmin: false,
+    });
+
     const handleGoogleSignIn = () => {
 
         var googleProvider = new firebase.auth.GoogleAuthProvider();
@@ -25,30 +45,36 @@ const Login = () => {
         firebase.auth()
             .signInWithPopup(googleProvider)
             .then((result) => {
-                const { photoURL, displayName, email } = result.user;
-                const signedInUser = { image: photoURL, name: displayName, email }
-                console.log(signedInUser);
-                setLoggedInUser(signedInUser);
-                storeAuthToken();
+                const user = result.user;
+                const newUser = { ...signedInUser };
+                newUser.email = user.email;
+                newUser.name = user.displayName;
+                setSignedInUser(newUser);
+                setLoggedInUser(newUser);
+                const checkAdmin = admins.find((admin) => admin.email == user.email);
+                if (checkAdmin) {
+                    newUser.isAdmin = true;
+                    setLoggedInUser(newUser);
+                }
                 history.replace(from);
             })
             .catch((error) => {
                 const errorMessage = error.message;
                 console.log(errorMessage);
             });
-    }
+    };
 
-    const storeAuthToken = () => {
-        firebase.auth().currentUser.getIdToken(/* forceRefresh */ true)
-            .then(function (idToken) {
-                // console.log(idToken)
-                sessionStorage.setItem('token', idToken);
-                history.replace(from);
-            })
-            .catch(function (error) {
-                // Handle error
-            });
-    }
+    // const storeAuthToken = () => {
+    //     firebase.auth().currentUser.getIdToken(/* forceRefresh */ true)
+    //         .then(function (idToken) {
+    //             // console.log(idToken)
+    //             sessionStorage.setItem('token', idToken);
+    //             history.replace(from);
+    //         })
+    //         .catch(function (error) {
+    //             // Handle error
+    //         });
+    // }
 
     return (
         <div className="login-page container">

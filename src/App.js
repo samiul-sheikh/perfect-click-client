@@ -16,6 +16,8 @@ import AllOrders from './Component/Dashboard/AllOrders/AllOrders';
 import OrderList from './Component/Dashboard/OrderList/OrderList';
 import MakeAdmin from './Component/Dashboard/MakeAdmin/MakeAdmin';
 import AdminList from './Component/Dashboard/AdminList/AdminList';
+import ImageGallery from './Component/ImageGallery/ImageGallery';
+import AdminRoute from './Component/Admin/AdminRoute/AdminRoute';
 
 export const UserContext = createContext();
 
@@ -31,6 +33,7 @@ function App() {
                     <div className="pages">
                         <Switch>
                             <Route exact path="/" component={Home} />
+                            <Route path="/imageGallery" component={ImageGallery} />
                             <Route path="/login" component={Login} />
                             <Route path="/service/:id" component={ServiceInformation} />
                             <PrivateRoute path="/checkout/:id">
@@ -39,17 +42,27 @@ function App() {
                             <PrivateRoute path="/dashboard">
                                 <Dashboard />
                             </PrivateRoute>
-                            <Route path="/admin/manageServices">
+                            <PrivateRoute path="/addReview">
+                                <AddTestimonial />
+                            </PrivateRoute>
+                            <PrivateRoute path="/orders">
+                                <OrderList />
+                            </PrivateRoute>
+                            <AdminRoute path="/admin/orders">
+                                <AllOrders />
+                            </AdminRoute>
+                            <AdminRoute path="/admin/addService">
+                                <AddServices />
+                            </AdminRoute>
+                            <AdminRoute path="/admin/manageServices">
                                 <ManageServices />
-                            </Route>
-                            <Route path="/admin/admins">
+                            </AdminRoute>
+                            <AdminRoute path="/admin/makeAdmin">
+                                <MakeAdmin />
+                            </AdminRoute>
+                            <AdminRoute path="/admin/admins">
                                 <AdminList />
-                            </Route>
-                            <Route path="/admin/addService" component={AddServices} />
-                            <Route path="/addReview" component={AddTestimonial} />
-                            <Route path="/admin/makeAdmin" component={MakeAdmin} />
-                            <Route path="/orders" component={OrderList} />
-                            <Route path="/admin/orders" component={AllOrders} />
+                            </AdminRoute>
                             <Route path="/*" component={NoMatch} />
                         </Switch>
                     </div>
