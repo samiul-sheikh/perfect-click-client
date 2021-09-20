@@ -8,7 +8,7 @@ const Services = () => {
 
     // display all services from server
     useEffect(() => {
-        fetch('http://localhost:5000/services')
+        fetch('https://shrouded-oasis-00377.herokuapp.com/services')
             .then(res => res.json())
             .then(data => setServices(data))
     }, [])

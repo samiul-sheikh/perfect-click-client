@@ -8,14 +8,14 @@ const ManageServices = () => {
     const [services, setServices] = useState([]);
 
     useEffect(() => {
-        fetch("http://localhost:5000/services")
+        fetch("https://shrouded-oasis-00377.herokuapp.com/services")
             .then((res) => res.json())
             .then((data) => setServices(data));
     }, []);
 
     // delete services from server and homepage
     const handleDelete = (id) => {
-        fetch('http://localhost:5000/delete/' + id, {
+        fetch('https://shrouded-oasis-00377.herokuapp.com/delete/' + id, {
             method: "DELETE",
         })
             .then((res) => res.json())

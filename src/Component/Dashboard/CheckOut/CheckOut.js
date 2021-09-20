@@ -16,7 +16,7 @@ const CheckOut = () => {
     const [checkoutService, setCheckoutService] = useState({});
 
     useEffect(() => {
-        fetch('http://localhost:5000/service/' + id)
+        fetch('https://shrouded-oasis-00377.herokuapp.com/service/' + id)
             .then(res => res.json())
             .then(data => setCheckoutService(data))
     }, [id]);
@@ -30,7 +30,7 @@ const CheckOut = () => {
             status: data.status
         }
         // store checkOut service information in server
-        fetch('http://localhost:5000/addOrder', {
+        fetch('https://shrouded-oasis-00377.herokuapp.com/addOrder', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(newOrder)

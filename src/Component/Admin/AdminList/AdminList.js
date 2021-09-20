@@ -8,14 +8,14 @@ const AdminList = () => {
     const [admins, setAdmins] = useState([]);
 
     useEffect(() => {
-        fetch("http://localhost:5000/admins")
+        fetch("https://shrouded-oasis-00377.herokuapp.com/admins")
             .then((res) => res.json())
             .then((data) => setAdmins(data));
     }, []);
 
     // delete admin from admin list
     const handleDelete = (id) => {
-        fetch('http://localhost:5000/deleteAdmin/' + id, {
+        fetch('https://shrouded-oasis-00377.herokuapp.com/deleteAdmin/' + id, {
             method: "DELETE",
         })
             .then((res) => res.json())

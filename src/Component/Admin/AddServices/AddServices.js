@@ -38,7 +38,7 @@ const AddServices = () => {
 
         // console.log(serviceData)
 
-        fetch('http://localhost:5000/addService', {
+        fetch('https://shrouded-oasis-00377.herokuapp.com/addService', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json', "Access-Control-Allow-Origin": "*", },
             body: JSON.stringify(serviceData)

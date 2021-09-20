@@ -8,7 +8,7 @@ const MakeAdmin = () => {
 
     const onSubmit = (data, e) => {
         // new admin information store in server
-        fetch("http://localhost:5000/makeAdmin", {
+        fetch("https://shrouded-oasis-00377.herokuapp.com/makeAdmin", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify(data),

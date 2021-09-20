@@ -17,7 +17,7 @@ const AddTestimonial = () => {
             image: imageURL
         };
 
-        const url = `http://localhost:5000/addTestimonial`;
+        const url = `https://shrouded-oasis-00377.herokuapp.com/addTestimonial`;
 
         fetch(url, {
             method: 'POST',

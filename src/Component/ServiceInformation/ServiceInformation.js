@@ -8,7 +8,7 @@ const ServiceInformation = () => {
     const [serviceInfo, setServiceInfo] = useState({});
 
     useEffect(() => {
-        fetch('http://localhost:5000/service/' + id)
+        fetch('https://shrouded-oasis-00377.herokuapp.com/service/' + id)
             .then(res => res.json())
             .then(data => setServiceInfo(data))
     }, [id])
