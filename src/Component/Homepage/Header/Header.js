@@ -1,7 +1,11 @@
 import React from 'react';
-import tv from '../../../images/banner-images/tv.png';
-import headphone from '../../../images/banner-images/headphone.png';
-import xbox from '../../../images/banner-images/xbox.png';
+import bg1 from '../../../images/banner-images/bg1.jpg';
+import bg2 from '../../../images/banner-images/bg2.jpg';
+import bg3 from '../../../images/banner-images/bg3.jpg';
+import v1 from '../../../images/vector-img/v1.jpg';
+import v2 from '../../../images/vector-img/v2.jpg';
+import v3 from '../../../images/vector-img/v3.jpg';
+
 import './Header.css';
 
 const Header = () => {
@@ -12,41 +16,38 @@ const Header = () => {
                     <div className="carousel-item active">
                         <div className="row d-flex align-items-center p-5">
                             <div className="col-md-7">
-                                <h1>Mega CD TV For Sports</h1>
-                                <p>This is the best tv in the world for people who just want to waste time in front of tv.</p>
-                                <h3>$1200</h3>
-                                <button className="btn btn-warning">Buy Now</button>
+                                <h1>Memories Worth Cherishing</h1>
+                                <p>Create the memories & celebrate the magic with Perfect Click</p>
+                                <button className="btn btn-primary">Learn More</button>
                             </div>
                             <div className="col-md-5">
-                                <img src={tv} className="d-block w-100" alt="..." />
+                                <img src={v1} className="d-block w-100" alt="..." />
                             </div>
                         </div>
                     </div>
                     <div className="carousel-item">
                         <div className="row d-flex align-items-center p-5">
                             <div className="col-md-7">
-                                <h1>Cool Dude Headphone</h1>
-                                <p>This is thee best headphone in the world for people who just want to waste time in front of funky world
+                                <h1>Modern and Natural</h1>
+                                <p>We are interested in the details about your wedding, your ceremony & reception venues, your vision, your dress, your colours and anything else you would like to share with us. We a Gold Coast and Brisbane.
                                 </p>
-                                <h3>$420</h3>
-                                <button className="btn btn-warning">Buy Now</button>
+                                <button className="btn btn-primary">Learn More</button>
                             </div>
                             <div className="col-md-5">
-                                <img src={headphone} className="d-block w-100" alt="..." />
+                                <img src={v2} className="d-block w-100" alt="..." />
                             </div>
                         </div>
                     </div>
                     <div className="carousel-item">
                         <div className="row d-flex align-items-center p-5">
                             <div className="col-md-7">
-                                <h1>X-Box for your living room</h1>
-                                <p>This is thee best x-borg in the world for people who just want to waste time in front of fake sports
+                                <h1>Elegance in every details</h1>
+                                <p>We are interested in the details about your wedding, your ceremony & reception venues, your vision, your dress, your colours and anything else you would like to share with us. We a Gold Coast and Brisbane.
                                 </p>
-                                <h3>$600</h3>
-                                <button className="btn btn-warning">Buy Now</button>
+                                <button className="btn btn-primary">Learn More</button>
                             </div>
                             <div className="col-md-5">
-                                <img src={xbox} className="d-block w-100" alt="..." />
+                                <img src={v3} className="d-block w-100" alt="..." />
                             </div>
                         </div>
                     </div>

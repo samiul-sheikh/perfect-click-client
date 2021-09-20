@@ -1,31 +1,31 @@
 import React from 'react';
-import img1 from '../../images/img1.jpg';
-import img5 from '../../images/img5.jpg';
-import img2 from '../../images/img2.jpg';
-import img4 from '../../images/img4.jpg';
-import headphone from '../../images/banner-images/headphone.png';
-import tv from '../../images/banner-images/tv.png';
-import xbox from '../../images/banner-images/xbox.png';
+import img6 from '../../images/img6.jpg';
+import img7 from '../../images/img7.jpg';
+import img8 from '../../images/img8.jpg';
+import img9 from '../../images/img9.jpg';
+import img10 from '../../images/img10.jpg';
+import img11 from '../../images/img11.jpg';
+import img12 from '../../images/img12.jpg';
 
 const ImageGallery = () => {
     return (
         <div class="container">
             <div class="row">
-                <div class="col-md-8"><img src={img1} className="img-fluid" alt="" /></div>
-                <div class="col-6 col-md-4"><img src={img5} className="img-fluid" alt="" /></div>
+                <div class="col-md-8"><img src={img7} className="img-fluid" alt="" /></div>
+                <div class="col-6 col-md-4"><img src={img6} className="img-fluid" alt="" /></div>
             </div>
 
 
             <div class="row mt-5">
-                <div class="col-6 col-md-4"><img src={img4} className="img-fluid" alt="" /></div>
-                <div class="col-6 col-md-4"><img src={img2} className="img-fluid" alt="" /></div>
-                <div class="col-6 col-md-4"><img src={headphone} className="img-fluid" alt="" /></div>
+                <div class="col-6 col-md-4"><img src={img8} className="img-fluid" alt="" /></div>
+                <div class="col-6 col-md-4"><img src={img9} className="img-fluid" alt="" /></div>
+                <div class="col-6 col-md-4"><img src={img10} className="img-fluid" alt="" /></div>
             </div>
 
 
             <div class="row mt-5">
-                <div class="col-6"><img src={tv} className="img-fluid" alt="" /></div>
-                <div class="col-6"><img src={xbox} className="img-fluid" alt="" /></div>
+                <div class="col-6"><img src={img11} className="img-fluid" alt="" /></div>
+                <div class="col-6"><img src={img12} className="img-fluid" alt="" /></div>
             </div>
         </div>
     );
