@@ -26,15 +26,17 @@ const blogData = [
 
 const Blogs = () => {
     return (
-        <section className="container mt-5">
-            <div className="text-center text-primary">
-                <h2>Our Blog</h2>
-                <h5>Here some of our blogs</h5>
-            </div>
-            <div className="row mt-3">
-                {
-                    blogData.map(blog => <BlogDetail blog={blog} key={blog.name}></BlogDetail>)
-                }
+        <section className="blogs mt-5">
+            <div className="container">
+                <div className="section-header text-center text-primary">
+                    <h2>Our Blog</h2>
+                    <h5>Here some of our blogs</h5>
+                </div>
+                <div className="row mt-3">
+                    {
+                        blogData.map(blog => <BlogDetail blog={blog} key={blog.name}></BlogDetail>)
+                    }
+                </div>
             </div>
         </section>
     );

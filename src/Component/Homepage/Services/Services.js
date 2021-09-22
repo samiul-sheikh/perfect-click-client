@@ -14,20 +14,22 @@ const Services = () => {
     }, [])
 
     return (
-        <section className="container mt-5">
-            <div className="text-center text-primary">
-                <h2>Our service</h2>
-                <h5>The great services we provide</h5>
-            </div>
-            <div className="row mt-3">
-                {
-                    services.length === 0 && <div class="spinner-border text-info mx-auto my-auto" role="status">
-                        <span className="visually-hidden">Loading...</span>
-                    </div>
-                }
-                {
-                    services.map(service => <ServiceDetail service={service} key={service.name}></ServiceDetail>)
-                }
+        <section className="services mt-5">
+            <div className="container">
+                <div className="text-center text-primary">
+                    <h2>Our service</h2>
+                    <h5>The great services we provide</h5>
+                </div>
+                <div className="row mt-3">
+                    {
+                        services.length === 0 && <div class="spinner-border text-info mx-auto my-auto" role="status">
+                            <span className="visually-hidden">Loading...</span>
+                        </div>
+                    }
+                    {
+                        services.map(service => <ServiceDetail service={service} key={service.name}></ServiceDetail>)
+                    }
+                </div>
             </div>
         </section>
     );

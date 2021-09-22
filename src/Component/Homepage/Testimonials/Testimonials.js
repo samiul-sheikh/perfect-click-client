@@ -19,7 +19,7 @@ const Testimonials = () => {
                     <h2>Testimonials</h2>
                     <h5>Happy client says about us</h5>
                 </div>
-                <div className="row mt-5">
+                <div className="row mt-3">
                     {
                         testimonials.length === 0 && <div class="spinner-border text-info mx-auto my-auto" role="status">
                             <span className="visually-hidden">Loading...</span>
