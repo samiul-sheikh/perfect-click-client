@@ -28,6 +28,8 @@ const OrderList = () => {
                             <th scope="col">Email</th>
                             <th scope="col">Service</th>
                             <th scope="col">Price</th>
+                            <th scope="col">Phone</th>
+                            <th scope="col">Address</th>
                             <th scope="col">Status</th>
                         </tr>
                     </thead>
@@ -38,6 +40,8 @@ const OrderList = () => {
                                 <td>{orders.email}</td>
                                 <td>{orders.service}</td>
                                 <td>{orders.price}</td>
+                                <td>{orders.phone}</td>
+                                <td>{orders.address}</td>
                                 <td className="text-danger">{orders.status}</td>
                             </tr>
                         ))}

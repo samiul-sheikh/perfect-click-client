@@ -27,7 +27,9 @@ const CheckOut = () => {
             ...loggedInUser,
             service: data.service,
             price: data.price,
-            status: data.status
+            phone: data.phone,
+            address: data.address,
+            status: "pending"
         }
         // store checkOut service information in server
         fetch('https://shrouded-oasis-00377.herokuapp.com/addOrder', {
@@ -73,15 +75,14 @@ const CheckOut = () => {
                             {errors.price && <span className="text-danger">This field is required</span>}
                         </div>
                         <div className="form-group mb-3">
-                            <label for="exampleInputStatus" className="form-label">Order Status</label>
-                            <div className="">
-                                <select name="status" ref={register({ required: true })} className="form-control"  >
-                                    <option defaultValue="Pending">Pending</option>
-                                    <option value="Ongoing">Ongoing</option>
-                                    <option value="Done">Done</option>
-                                </select>
-                                {errors.status && <span className="text-danger">This field is required</span>}
-                            </div>
+                            <label for="exampleInputPhone" className="form-label">Phone Number</label>
+                            <input type="text" ref={register({ required: true })} name="phone" placeholder="enter your phone no" className="form-control" />
+                            {errors.phone && <span className="text-danger">This field is required</span>}
+                        </div>
+                        <div className="form-group mb-3">
+                            <label for="exampleInputAddress" className="form-label">Your Address</label>
+                            <input type="text" ref={register({ required: true })} name="address" placeholder="enter your address" className="form-control" />
+                            {errors.address && <span className="text-danger">This field is required</span>}
                         </div>
                         <div className="form-group d-grid mx-auto">
                             <button type="submit" className="btn btn-primary">Place Order</button>
