@@ -13,28 +13,28 @@ const Footer = () => {
                         <h2>About Us</h2>
                         <p>Lorem ipsum dolor sit amet consectetur.</p>
                         <ul className="sci">
-                            <li><a href="#"><FontAwesomeIcon icon={faFacebook} /></a></li>
-                            <li><a href="#"><FontAwesomeIcon icon={faTwitter} /></a></li>
-                            <li><a href="#"><FontAwesomeIcon icon={faInstagram} /></a></li>
-                            <li><a href="#"><FontAwesomeIcon icon={faYoutube} /></a></li>
+                            <li><a href="www.facebook.com"><FontAwesomeIcon icon={faFacebook} /></a></li>
+                            <li><a href="www.twitter.com"><FontAwesomeIcon icon={faTwitter} /></a></li>
+                            <li><a href="www.instagram.com"><FontAwesomeIcon icon={faInstagram} /></a></li>
+                            <li><a href="www.youtube.com"><FontAwesomeIcon icon={faYoutube} /></a></li>
                         </ul>
                     </div>
                     <div className="sec quicklinks">
                         <h2>Quick Links</h2>
                         <ul>
-                            <li><a href="#">About</a></li>
-                            <li><a href="#">Blog</a></li>
-                            <li><a href="#">Contact</a></li>
-                            <li><a href="#">Photo Gallery</a></li>
+                            <li><a href="imageGallery">Image Gallery</a></li>
+                            <li><a href="blog">Our Blog</a></li>
+                            <li><a href="contact">Contact Us</a></li>
+                            <li><a href="about">About Us</a></li>
                         </ul>
                     </div>
                     <div className="sec quicklinks">
                         <h2>Category</h2>
                         <ul>
-                            <li><a href="#">Portrait</a></li>
-                            <li><a href="#">Bride</a></li>
-                            <li><a href="#">Outdoor</a></li>
-                            <li><a href="#">Indoor</a></li>
+                            <li><a href="services">Basic Package</a></li>
+                            <li><a href="standard">Standard Package</a></li>
+                            <li><a href="luxury">Luxury Package</a></li>
+                            <li><a href="premium">Premium Package</a></li>
                         </ul>
                     </div>
                     <div className="sec contact">

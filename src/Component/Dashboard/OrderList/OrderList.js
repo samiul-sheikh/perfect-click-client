@@ -34,15 +34,15 @@ const OrderList = () => {
                         </tr>
                     </thead>
                     <tbody>
-                        {orders.map((orders) => (
+                        {orders.map((order) => (
                             <tr>
-                                <td>{orders.name} </td>
-                                <td>{orders.email}</td>
-                                <td>{orders.service}</td>
-                                <td>{orders.price}</td>
-                                <td>{orders.phone}</td>
-                                <td>{orders.address}</td>
-                                <td className="text-danger">{orders.status}</td>
+                                <td>{order.name} </td>
+                                <td>{order.email}</td>
+                                <td>{order.service}</td>
+                                <td>{order.price}</td>
+                                <td>{order.phone}</td>
+                                <td>{order.address}</td>
+                                <td className="text-danger">{order.status}</td>
                             </tr>
                         ))}
                     </tbody>

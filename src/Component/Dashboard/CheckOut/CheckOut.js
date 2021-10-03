@@ -29,7 +29,7 @@ const CheckOut = () => {
             price: data.price,
             phone: data.phone,
             address: data.address,
-            status: "pending"
+            status: "Pending"
         }
         // store checkOut service information in server
         fetch('https://shrouded-oasis-00377.herokuapp.com/addOrder', {

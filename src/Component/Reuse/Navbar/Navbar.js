@@ -22,6 +22,9 @@ const Navbar = () => {
                             <NavLink exact to="/" activeClassName="active" className="nav-links" onClick={handleClick}>Home</NavLink>
                         </li>
                         <li className="nav-item">
+                            <NavLink exact to="/imageGallery" activeClassName="active" className="nav-links" onClick={handleClick}>Image Gallery</NavLink>
+                        </li>
+                        <li className="nav-item">
                             <NavLink exact to="/service" activeClassName="active" className="nav-links" onClick={handleClick}>Service</NavLink>
                         </li>
                         <li className="nav-item">
@@ -30,12 +33,9 @@ const Navbar = () => {
                         <li className="nav-item">
                             <NavLink exact to="/dashboard" activeClassName="active" className="nav-links" onClick={handleClick}>Dashboard</NavLink>
                         </li>
-                        <li className="nav-item">
-                            <NavLink exact to="/imageGallery" activeClassName="active" className="nav-links" onClick={handleClick}>Image Gallery</NavLink>
-                        </li>
-                        <li className="nav-item">
+                        {/* <li className="nav-item">
                             <NavLink exact to="/about" activeClassName="active" className="nav-links" onClick={handleClick}>About us</NavLink>
-                        </li>
+                        </li> */}
                         {loggedInUser.name ?
                             <li className="nav-item">
                                 <NavLink exact to="/login" activeClassName="active" className="nav-links" onClick={handleClick}>{loggedInUser.name}</NavLink>

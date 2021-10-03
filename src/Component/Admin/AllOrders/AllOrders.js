@@ -11,6 +11,19 @@ const AllOrders = () => {
             .then((data) => setOrders(data))
     }, []);
 
+    const [status, setStatus] = useState(orders.status)
+    const handleStatus = (e) => {
+        setStatus(e.target.value)
+        const newOrder = { status: e.target.value, id: orders._id }
+        fetch('https://shrouded-oasis-00377.herokuapp.com/updateStatus', {
+            method: 'PATCH',
+            headers: { 'content-type': 'application/json' },
+            body: JSON.stringify(newOrder)
+        })
+            .then(res => res.json())
+            .then(data => console.log(data))
+    }
+
     return (
         <section className="container-fluid row">
             <Sidebar />
@@ -29,15 +42,21 @@ const AllOrders = () => {
                         </tr>
                     </thead>
                     <tbody>
-                        {orders.map((orders) => (
+                        {orders.map((order) => (
                             <tr>
-                                <td>{orders.name} </td>
-                                <td>{orders.email}</td>
-                                <td>{orders.service}</td>
-                                <td>{orders.price}</td>
-                                <td>{orders.phone}</td>
-                                <td>{orders.address}</td>
-                                <td className="text-danger">{orders.status}</td>
+                                <td>{order.name} </td>
+                                <td>{order.email}</td>
+                                <td>{order.service}</td>
+                                <td>{order.price}</td>
+                                <td>{order.phone}</td>
+                                <td>{order.address}</td>
+                                <td>
+                                    <select onChange={handleStatus} name="status" id="status" defaultValue={status}>
+                                        <option className="text-danger" value="Pending">Pending</option>
+                                        <option className="tex-warning" value="Ongoing">Ongoing</option>
+                                        <option className="text-success" value="Done">Done</option>
+                                    </select>
+                                </td>
                             </tr>
                         ))}
                     </tbody>

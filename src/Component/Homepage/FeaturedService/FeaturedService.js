@@ -11,9 +11,7 @@ const FeaturedService = () => {
                     <div className="col-md-7 align-self-center">
                         <h1>Exceptional PhotoShoot, on your Term</h1>
                         <p className="text-secondary my-5">
-                            Perfect Click is a full-service wedding and special event planning company with takes care of your floral, design and logistics needs.
-
-                            Our office is located in Dhaka Bangladesh. Our goal, besides ensuring a flawless and magical event for you, is to make your planning
+                            Perfect Click is a full-service wedding and special event planning company with takes care of your floral, design and logistics needs. Our office is located in Dhaka Bangladesh. Our goal, besides ensuring a flawless and magical event for you, is to make your planning
                         </p>
                         <button className="btn btn-primary">Learn More</button>
                     </div>

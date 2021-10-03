@@ -1,4 +1,3 @@
-import { faSpinner } from '@fortawesome/free-solid-svg-icons';
 import React, { useEffect, useState } from 'react';
 import ServiceDetail from '../ServiceDetail/ServiceDetail';
 
