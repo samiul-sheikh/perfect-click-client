@@ -4,7 +4,7 @@ import image2 from '../../../images/image2.png';
 import image3 from '../../../images/image3.png';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFacebook, faInstagram, faTwitter } from '@fortawesome/free-brands-svg-icons';
-
+import './Photographers.css';
 
 const Photographers = () => {
     return (

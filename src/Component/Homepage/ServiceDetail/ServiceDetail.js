@@ -17,7 +17,7 @@ const ServiceDetail = ({ service }) => {
 
     return (
         <div className="col-md-3 text-center p-5">
-            <div className="card border-0 bg-light" style={{ width: '18rem' }}>
+            <div className="card border-0 bg-light reuse-card" style={{ width: '18rem' }}>
                 <img src={service.imageURL} className="card-img-top" alt="..." style={{ height: '250px' }} />
                 <div className="card-body">
                     <h5 className="card-title">{service.name}</h5>
