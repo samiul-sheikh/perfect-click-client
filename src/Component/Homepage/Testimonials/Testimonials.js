@@ -13,13 +13,15 @@ const Testimonials = () => {
     }, [])
 
     return (
-        <section className="testimonials my-5">
-            <div className="container">
-                <div className="section-header text-center text-primary">
-                    <h2>Testimonials</h2>
-                    <h5>Happy client says about us</h5>
+        <section className="testimonials">
+            <div className="container my-3 py-5 text-center">
+                <div className="row mb-5">
+                    <div className="col text-primary">
+                        <h2>Testimonials</h2>
+                        <h5>Happy client says about us</h5>
+                    </div>
                 </div>
-                <div className="row mt-3">
+                <div className="row">
                     {
                         testimonials.length === 0 && <div class="spinner-border text-info mx-auto my-auto" role="status">
                             <span className="visually-hidden">Loading...</span>

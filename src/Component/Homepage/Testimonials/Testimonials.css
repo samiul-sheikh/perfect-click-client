@@ -4,12 +4,9 @@
 .testimonials .card-header{
     border: 0;
     background-color: transparent;
-
-
 }
-
 .testimonials .card:hover{
-    background-image: linear-gradient(75deg, #19D3AE,#0fcfec);
+    background-image: linear-gradient(75deg, #4d62cb,#3044a5);
     color: #fff !important;
     transition:  .1s  all ease-in-out !important;
 }
@@ -17,13 +14,12 @@
     background-image: url(../../../images/quote.png);
     background-repeat: no-repeat;
     background-position: right top;
-    background-size: 60%;
+    background-size: 10%;
 }
 .testimonials .card:hover h6,
 .testimonials .card:hover p
 {
     color: #fff !important;
-
 }
 .testimonials .card:hover img{
     display: none;

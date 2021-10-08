@@ -5,7 +5,7 @@ const Testimonial = ({ testimonial }) => {
     const { name, information, description,  image } = testimonial;
 
     return (
-        <div className="col-md-4 card shadow-sm p-5">
+        <div className="col-lg-4 col-md-6 card shadow-sm p-5 my-3">
             <div className="card-header d-flex  align-items-center">
                 <img className="mx-3" src={image} alt="" width="60"/>
                 <div>
