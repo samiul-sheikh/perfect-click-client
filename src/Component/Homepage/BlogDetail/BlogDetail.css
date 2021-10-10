@@ -1,6 +1,14 @@
-.reuse-card:hover{
+.blog-card:hover{
     box-shadow: -2px -1px 26px -4px rgba(0,0,0,0.75);
 -webkit-box-shadow: -2px -1px 26px -4px rgba(0,0,0,0.75);
 -moz-box-shadow: -2px -1px 26px -4px rgba(0,0,0,0.75);
 transition: 0.5s;
+}
+
+.blog-card{
+height: 100%;
+width: 100%;
+display: flex;
+justify-content: space-between;
+align-items: center;
 }

@@ -2,13 +2,17 @@ import React from 'react';
 import './BlogDetail.css';
 
 const BlogDetail = ({ blog }) => {
+
+    const { image, name, details } = blog;
+    
     return (
-        <div className="col-md-3 text-center p-5">
-            <div className="card border-0 bg-light reuse-card" style={{ width: '18rem' }}>
-                <img src={blog.image} className="card-img-top cover" alt="..." style={{ height: '250px' }} />
+        <div className="col-lg-3 col-md-6">
+            <div className="card border-0 bg-light blog-card">
                 <div className="card-body">
-                    <h5 className="card-title">{blog.name}</h5> <br />
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere autem sed harum odio natus veniam?</p>
+                    <img src={image} alt="" className="img-fluid mb-3" />
+                    <h3>{name}</h3>
+                    <p>{details}</p>
+                    <button type="button" className="btn btn-link">See More</button>
                 </div>
             </div>
         </div>

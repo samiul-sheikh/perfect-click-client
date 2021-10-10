@@ -1,38 +1,44 @@
 import React from 'react';
 import img1 from '../../../images/img1.jpg';
 import img2 from '../../../images/img2.jpg';
-import img5 from '../../../images/img5.jpg';
+import img5 from '../../../images/img55.jpg';
 import img4 from '../../../images/img4.jpg';
 import BlogDetail from '../BlogDetail/BlogDetail';
 
 const blogData = [
     {
-        name: 'Portrait Photography',
-        image: img1
+        name: 'Portrait',
+        image: img1,
+        details: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit.'
     },
     {
-        name: 'Bridal Photography',
-        image: img2
+        name: 'Bridal',
+        image: img2,
+        details: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit.'
     },
     {
-        name: 'Indoor Photography',
-        image: img5
+        name: 'Indoor',
+        image: img5,
+        details: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit.'
     },
     {
-        name: 'Outdoor Photography',
-        image: img4
+        name: 'Videography',
+        image: img4,
+        details: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit.'
     }
 ]
 
 const Blogs = () => {
     return (
-        <section className="blogs mt-5">
-            <div className="container">
-                <div className="section-header text-center text-primary">
-                    <h2>Our Blog</h2>
-                    <h5>Here some of our blogs</h5>
+        <section className="mt-5">
+            <div className="container my-3 py-5 text-center">
+                <div className="row mb-5">
+                    <div className="col text-primary">
+                        <h2>Our Blog</h2>
+                        <h5 className="mt-3">Here some of our blogs</h5>
+                    </div>
                 </div>
-                <div className="row mt-3">
+                <div className="row gy-4">
                     {
                         blogData.map(blog => <BlogDetail blog={blog} key={blog.name}></BlogDetail>)
                     }

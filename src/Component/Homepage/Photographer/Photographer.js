@@ -3,6 +3,7 @@ import React from 'react';
 const Photographer = ({ photographer }) => {
 
     const { name, title, image, facebook, twitter, instagram } = photographer;
+    
     return (
         <div className="col-lg-3 col-md-6">
             <div className="card my-4">
