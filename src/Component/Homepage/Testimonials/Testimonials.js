@@ -23,7 +23,7 @@ const Testimonials = () => {
                 </div>
                 <div className="row">
                     {
-                        testimonials.length === 0 && <div class="spinner-border text-info mx-auto my-auto" role="status">
+                        testimonials.length === 0 && <div class="spinner-border text-primary mx-auto my-auto" role="status">
                             <span className="visually-hidden">Loading...</span>
                         </div>
                     }
