@@ -1,5 +1,6 @@
 import React from 'react';
-import feature from '../../../images/vector-img/v5.jpg'
+// import feature from '../../../images/vector-img/v5.jpg'
+import feature from '../../../images/i/i2.jpg'
 const FeaturedService = () => {
     return (
         <section className="features-service pb-0 pb-md-5 my-5">

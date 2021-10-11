@@ -10,7 +10,7 @@ const Sidebar = () => {
     const [loggedInUser, setLoggedInUser] = useContext(UserContext)
 
     return (
-        <div className="sidebar d-flex flex-column justify-content-between col-md-2 py-5 px-4" style={{ height: "100vh", left: "0" }}>
+        <div className="sidebar d-flex flex-column justify-content-between col-md-2 py-5 px-4" style={{ height: "90vh", left: "0" }}>
             <ul className="list-unstyled">
                 {loggedInUser && (<>
                     <li>
