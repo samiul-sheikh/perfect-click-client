@@ -17,11 +17,11 @@ const ServiceDetail = ({ service }) => {
     }
 
     return (
-        <div className="col-lg-3 col-md-6 text-center p-5">
+        <div className="col-lg-3 col-md-6 py-3">
             <div className="card border-0 bg-light service-card">
-                <img src={service.imageURL} className="img-fluid mb-2" alt="..." style={{ height: '250px' }} />
+                <img src={service.imageURL} alt="" className="img-fluid" />
                 <div className="card-body">
-                    <h5 className="card-title">{service.name}</h5>
+                    <h3 className="card-title">{service.name}</h3>
                     <div className="d-flex justify-content-between mt-3">
                         <button onClick={() => serviceInfo(service._id)} type="button" className="btn btn-outline-primary">view more</button>
                         <button onClick={() => handleService(service._id)} type="button" className="btn btn-outline-primary">buy now</button>

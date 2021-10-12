@@ -27,9 +27,9 @@ const Navbar = () => {
                         <li className="nav-item">
                             <NavLink exact to="/service" activeClassName="active" className="nav-links" onClick={handleClick}>Service</NavLink>
                         </li>
-                        <li className="nav-item">
+                        {/* <li className="nav-item">
                             <NavLink exact to="/blog" activeClassName="active" className="nav-links" onClick={handleClick}>BLog</NavLink>
-                        </li>
+                        </li> */}
                         <li className="nav-item">
                             <NavLink exact to="/dashboard" activeClassName="active" className="nav-links" onClick={handleClick}>Dashboard</NavLink>
                         </li>

@@ -22,7 +22,6 @@ const Photographer = ({ photographer }) => {
                         <div className="p-4">
                             <a href="#">{instagram}</a>
                         </div>
-
                     </div>
                 </div>
             </div>

@@ -1,5 +1,5 @@
 # Perfect Click
-## Photography service based react application
+## photography service based react application
 
 ### `Technology Used`
 - JavaScript (ES6)
@@ -29,7 +29,7 @@
 - Users can give review from dashboard add review option which dynamically display in homepage.
 - An Admin can view all orders, add new services also make new admins.
 - Only valid admin can delete service, another admin also change the order status.
-- fully responsive for mobile/tab/web devices.
+- Fully responsive for mobile/tab/web devices.
 
 ### `Server Side Repository`
 https://github.com/samiul-sheikh/perfect-click-server
@@ -39,4 +39,4 @@ https://github.com/samiul-sheikh/perfect-click-server
 <img src="./src/images/project_ui/orderList.PNG">
 <img src="./src/images/project_ui/addService.PNG">
 <img src="./src/images/project_ui/manageService.PNG">
-<img src="./src/images/project_ui/addAdmin.PNG">
+<img src="./src/images/project_ui/makeAdmin.PNG">
