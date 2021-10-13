@@ -14,8 +14,8 @@ const Testimonials = () => {
 
     return (
         <section className="testimonials">
-            <div className="container my-3 py-5 text-center">
-                <div className="row mb-5">
+            <div className="container text-center">
+                <div className="row mb-3">
                     <div className="col text-primary">
                         <h2>Testimonials</h2>
                         <h5>Happy client says about us</h5>
@@ -28,7 +28,7 @@ const Testimonials = () => {
                         </div>
                     }
                     {
-                        testimonials.map(testimonial => <Testimonial testimonial={testimonial} key={testimonial.email} />)
+                        testimonials.map(testimonial => <Testimonial testimonial={testimonial} key={testimonial.name} />)
                     }
                 </div>
             </div>

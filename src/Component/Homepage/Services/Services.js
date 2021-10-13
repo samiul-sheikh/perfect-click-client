@@ -14,8 +14,8 @@ const Services = () => {
 
     return (
         <section className="mt-5">
-            <div className="container my-3 pb-5 text-center">
-                <div className="row mb-5">
+            <div className="container my-3 pb-3 text-center">
+                <div className="row mb-4">
                     <div className="col text-primary">
                         <h2>Our Service</h2>
                         <h5 className="mt-3">The great services we provide</h5>

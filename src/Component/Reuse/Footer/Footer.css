@@ -3,7 +3,7 @@
     display: grid;
     /* justify-content: end; */
     align-content: end;
-    min-height: 100vh;
+    /* min-height: 100vh; */
 }
 footer{
     position: relative;

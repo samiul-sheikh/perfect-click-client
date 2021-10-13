@@ -16,7 +16,7 @@
     background-position: right top;
     background-size: 10%;
 }
-.testimonials .card:hover h6,
+.testimonials .card:hover h5,
 .testimonials .card:hover p
 {
     color: #fff !important;

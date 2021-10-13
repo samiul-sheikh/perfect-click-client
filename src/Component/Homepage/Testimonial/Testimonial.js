@@ -9,7 +9,7 @@ const Testimonial = ({ testimonial }) => {
             <div className="card-header d-flex  align-items-center">
                 <img className="mx-3" src={image} alt="" width="60"/>
                 <div>
-                    <h6 className="text-primary">{name}</h6>
+                    <h5 className="text-primary">{name}</h5>
                     <p className="m-0">{information}</p>
                 </div>
             </div>

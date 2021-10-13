@@ -20,7 +20,7 @@ const Dashboard = () => {
                 <div className="col-md-10 text-center mt-5">
                     <h3>Hello ! </h3>
                     <h1>{loggedInUser.name}</h1>
-                    <h4 className="text-center">welcome to your Dashboard....</h4>
+                    <h4 className="text-center">Welcome to your Dashboard...!</h4>
                 </div>
             </div>
         </section>

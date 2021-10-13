@@ -64,18 +64,6 @@ const Login = () => {
             });
     };
 
-    // const storeAuthToken = () => {
-    //     firebase.auth().currentUser.getIdToken(/* forceRefresh */ true)
-    //         .then(function (idToken) {
-    //             // console.log(idToken)
-    //             sessionStorage.setItem('token', idToken);
-    //             history.replace(from);
-    //         })
-    //         .catch(function (error) {
-    //             // Handle error
-    //         });
-    // }
-
     return (
         <div className="login-page container">
             <div className="row align-items-center" style={{ height: "100vh" }}>

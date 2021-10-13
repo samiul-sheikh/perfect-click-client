@@ -20,7 +20,7 @@ const Header = () => {
                                 <p>Create the memories & celebrate the magic with Perfect Click</p>
                                 <button className="btn btn-primary">Learn More</button>
                             </div>
-                            <div className="col-md-5">
+                            <div className="col-md-5 mt-3">
                                 <img src={v1} className="d-block w-100" alt="..." />
                             </div>
                         </div>
@@ -33,7 +33,7 @@ const Header = () => {
                                 </p>
                                 <button className="btn btn-primary">Learn More</button>
                             </div>
-                            <div className="col-md-5">
+                            <div className="col-md-5 mt-3">
                                 <img src={v2} className="d-block w-100" alt="..." />
                             </div>
                         </div>
@@ -46,7 +46,7 @@ const Header = () => {
                                 </p>
                                 <button className="btn btn-primary">Learn More</button>
                             </div>
-                            <div className="col-md-5">
+                            <div className="col-md-5 mt-3">
                                 <img src={v3} className="d-block w-100" alt="..." />
                             </div>
                         </div>

@@ -9,25 +9,25 @@ import img12 from '../../images/img12.jpg';
 
 const ImageGallery = () => {
     return (
-        <div class="container">
-            <div class="row">
-                <div class="col-md-8"><img src={img7} className="img-fluid" alt="" /></div>
-                <div class="col-6 col-md-4"><img src={img6} className="img-fluid" alt="" /></div>
+        <section className="mt-5">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-8"><img src={img7} className="img-fluid" alt="" /></div>
+                    <div class="col-6 col-md-4"><img src={img6} className="img-fluid" alt="" /></div>
+                </div>
+
+                <div class="row mt-5">
+                    <div class="col-6 col-md-4"><img src={img8} className="img-fluid" alt="" /></div>
+                    <div class="col-6 col-md-4"><img src={img9} className="img-fluid" alt="" /></div>
+                    <div class="col-6 col-md-4"><img src={img10} className="img-fluid" alt="" /></div>
+                </div>
+
+                <div class="row mt-5">
+                    <div class="col-6"><img src={img11} className="img-fluid" alt="" /></div>
+                    <div class="col-6"><img src={img12} className="img-fluid" alt="" /></div>
+                </div>
             </div>
-
-
-            <div class="row mt-5">
-                <div class="col-6 col-md-4"><img src={img8} className="img-fluid" alt="" /></div>
-                <div class="col-6 col-md-4"><img src={img9} className="img-fluid" alt="" /></div>
-                <div class="col-6 col-md-4"><img src={img10} className="img-fluid" alt="" /></div>
-            </div>
-
-
-            <div class="row mt-5">
-                <div class="col-6"><img src={img11} className="img-fluid" alt="" /></div>
-                <div class="col-6"><img src={img12} className="img-fluid" alt="" /></div>
-            </div>
-        </div>
+        </section>
     );
 };
 

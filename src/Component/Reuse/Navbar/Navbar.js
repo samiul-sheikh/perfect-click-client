@@ -25,7 +25,7 @@ const Navbar = () => {
                             <NavLink exact to="/imageGallery" activeClassName="active" className="nav-links" onClick={handleClick}>Image Gallery</NavLink>
                         </li>
                         <li className="nav-item">
-                            <NavLink exact to="/service" activeClassName="active" className="nav-links" onClick={handleClick}>Service</NavLink>
+                            <NavLink exact to="/services" activeClassName="active" className="nav-links" onClick={handleClick}>Service</NavLink>
                         </li>
                         {/* <li className="nav-item">
                             <NavLink exact to="/blog" activeClassName="active" className="nav-links" onClick={handleClick}>BLog</NavLink>

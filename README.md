@@ -35,8 +35,16 @@
 https://github.com/samiul-sheikh/perfect-click-server
 
 ### `Project UI`
+<img src="./src/images/project_ui/homepage.png">
+<img src="./src/images/project_ui/homepageTabView.png">
+<img src="./src/images/project_ui/imageGallery.png">
+<img src="./src/images/project_ui/services.png">
+<img src="./src/images/project_ui/adminDashboard.png">
 <img src="./src/images/project_ui/allOrderList.PNG">
-<img src="./src/images/project_ui/orderList.PNG">
 <img src="./src/images/project_ui/addService.PNG">
 <img src="./src/images/project_ui/manageService.PNG">
 <img src="./src/images/project_ui/makeAdmin.PNG">
+<img src="./src/images/project_ui/adminList.PNG">
+<img src="./src/images/project_ui/userDashboard.png">
+<img src="./src/images/project_ui/testimonial.png">
+<img src="./src/images/project_ui/orderList.PNG">

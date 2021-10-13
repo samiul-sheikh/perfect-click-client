@@ -31,11 +31,11 @@ const blogData = [
 const Blogs = () => {
     return (
         <section className="mt-5">
-            <div className="container my-3 py-5 text-center">
+            <div className="container text-center">
                 <div className="row mb-5">
                     <div className="col text-primary">
                         <h2>Our Blog</h2>
-                        <h5 className="mt-3">Here some of our blogs</h5>
+                        <h5>Here some of our blogs</h5>
                     </div>
                 </div>
                 <div className="row gy-4">

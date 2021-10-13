@@ -18,6 +18,7 @@ import MakeAdmin from './Component/Admin/MakeAdmin/MakeAdmin';
 import AdminList from './Component/Admin/AdminList/AdminList';
 import NoMatch from './Component/NoMatch/NoMatch';
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import Services from './Component/Homepage/Services/Services';
 
 export const UserContext = createContext();
 
@@ -33,6 +34,7 @@ function App() {
                     <div className="pages">
                         <Switch>
                             <Route exact path="/" component={Home} />
+                            <Route exact path="/services" component={Services} />
                             <Route path="/imageGallery" component={ImageGallery} />
                             <Route path="/login" component={Login} />
                             <PrivateRoute path="/service/:id">
